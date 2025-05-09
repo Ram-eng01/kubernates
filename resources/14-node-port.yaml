@@ -4,7 +4,7 @@ metadata:
   name: nginx-nodeport
 spec:
   type: NodePort
-  seector:
+  selector:
     name: frontend
     project: robo
     component: backend
