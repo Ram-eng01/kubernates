@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-example
+data:
+  course: "DevOps"
+  trainer: "mohan"
+  git: "https://github.com/Ram-eng01/kubernates.git"
+  
