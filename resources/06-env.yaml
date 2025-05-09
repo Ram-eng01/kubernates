@@ -8,6 +8,6 @@ spec:
     image: nginx
     env:
     - name: course
-      value: k8
+      value: 'k8'
     - name: trainer
-      value: mohan
+      value: 'mohan'
