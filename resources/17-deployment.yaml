@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Depoyment
+metadata:
+  name: nginx-depoyment 
+  labels:
+    app: nginx
+    tire: web
+    purpose: deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx
+      tire: web
+      project: test-deployment
+  template:
+    metadata:
+      labels:
+        app: nginx
+        tire: web
+        project: test-deployment
+        extra: value
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+
+
+    
