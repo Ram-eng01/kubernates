@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+matadata:
+  name: nginx
+  labels:
+    app: nginx
+    tire: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+      tire: web
+  template:
+    metadata:
+      labels:
+        tire: web
+        app: nginx
+        project: xyz
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
